@@ -18,6 +18,7 @@ productsRoutes.get("/:id", (req, res) => {
 productsRoutes.post("/", (req, res) => {
     const product = req.body
     createProduct(product)
+    res.status(201)
     res.json(product)
 })
 
@@ -25,6 +26,7 @@ productsRoutes.post("/", (req, res) => {
 productsRoutes.put("/:id", (req, res) => {
     const id = req.params.id
     const product = req.body
+    console.log(res.statusMessage = "Producto modificado con exito!");
     res.json(updateProduct(id, product))
 })
 
@@ -32,6 +34,7 @@ productsRoutes.put("/:id", (req, res) => {
 productsRoutes.delete("/:id", (req, res) => {
     const id = req.params.id
     deleteProduct(id)
+    console.log(res.statusMessage = "Producto eliminado con exito!");
     res.json(getAllProducts)
 })
 

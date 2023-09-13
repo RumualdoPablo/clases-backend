@@ -18,8 +18,7 @@ productsRoutes.get("/:id", (req, res) => {
 productsRoutes.post("/", (req, res) => {
     const product = req.body
     createProduct(product)
-    res.status(201)
-    res.json(product)
+    res.status(201).json(product)
 })
 
 // Actualiza un producto del listado
@@ -37,5 +36,6 @@ productsRoutes.delete("/:id", (req, res) => {
     console.log(res.statusMessage = "Producto eliminado con exito!");
     res.json(getAllProducts)
 })
+
 
 export default productsRoutes;

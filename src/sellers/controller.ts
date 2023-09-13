@@ -1,5 +1,7 @@
 import { Router } from "express";
 import { createSeller, deleteSeller, getAllSellers, getSellerById, updateSeller } from "./service";
+import productsRoutes from "../products/controller";
+import { getProductBySeller } from "../products/service";
 
 const sellersRoutes = Router();
 
@@ -18,8 +20,7 @@ sellersRoutes.get("/:id", (req, res) => {
 sellersRoutes.post("/", (req, res) => {
     const seller = req.body
     createSeller(seller)
-    res.status(201)
-    res.json(seller)
+    res.status(201).json(seller)
 })
 
 // Actualiza un vendedor del listado
@@ -37,5 +38,13 @@ sellersRoutes.delete("/:id", (req, res) => {
     console.log(res.statusMessage = "Vendedor eliminado con exito!");
     res.json(getAllSellers)
 })
+
+// Ver productos de un vendedor
+
+sellersRoutes.get("/:id/products", (req,res) => {
+    const id = req.params.id
+    res.json(getProductBySeller(id));
+})
+
 
 export default sellersRoutes;

@@ -24,3 +24,7 @@ export const deleteProduct = (id: string) => {
     allProducts.splice(index, 1)
     return id
 }
+
+export const getProductBySeller = (sellerId:string) => {
+    return allProducts.find((product) => product.vendedor === sellerId)
+}

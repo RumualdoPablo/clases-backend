@@ -2,7 +2,7 @@ import crypto from "crypto";
 
 const allSellers = [
     {
-        "id": crypto.randomUUID(),
+        "id": "1",
         "nombre": "Homer Simpson",
         "correo": "homer@example.com",
         "telefono": "+1 (123) 456-7890",
@@ -13,7 +13,7 @@ const allSellers = [
     },
 
     {
-        "id": crypto.randomUUID(),
+        "id": "2",
         "nombre": "Marge Simpson",
         "correo": "marge@example.com",
         "telefono": "+1 (555) 789-1234",
@@ -24,7 +24,7 @@ const allSellers = [
     },
 
     {
-        "id": crypto.randomUUID(),
+        "id": "3",
         "nombre": "Bart Simpson",
         "correo": "bart@example.com",
         "telefono": "+1 (987) 654-3210",
@@ -35,7 +35,7 @@ const allSellers = [
     },
 
     {
-        "id": crypto.randomUUID(),
+        "id": "4",
         "nombre": "Lisa Simpson",
         "correo": "lisa@example.com",
         "telefono": "+1 (777) 888-9999",
@@ -46,7 +46,7 @@ const allSellers = [
     },
 
     {
-        "id": crypto.randomUUID(),
+        "id": "5",
         "nombre": "Maggie Simpson",
         "correo": "maggie@example.com",
         "telefono": "+1 (222) 333-4444",
@@ -57,7 +57,7 @@ const allSellers = [
     },
 
     {
-        "id": crypto.randomUUID(),
+        "id": "6",
         "nombre": "Ned Flanders",
         "correo": "ned@example.com",
         "telefono": "+1 (555) 123-4567",

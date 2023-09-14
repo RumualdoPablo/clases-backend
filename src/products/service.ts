@@ -25,6 +25,8 @@ export const deleteProduct = (id: string) => {
     return id
 }
 
-export const getProductBySeller = (sellerId:string) => {
-    return allProducts.find((product) => product.vendedor === sellerId)
+export const getProductBySeller = (sellerId: string) => {
+    return allProducts.filter((product) => {
+        return product.vendedor === sellerId
+    })
 }

@@ -1,6 +1,5 @@
 import { Router } from "express";
 import { createSeller, deleteSeller, getAllSellers, getSellerById, updateSeller } from "./service";
-import productsRoutes from "../products/controller";
 import { getProductBySeller } from "../products/service";
 
 const sellersRoutes = Router();

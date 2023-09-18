@@ -1,5 +1,7 @@
 import { Router } from "express";
 import { createProduct, deleteProduct, getAllProducts, getProductById, updateProduct } from "./service";
+import Product from "../types/productType";
+
 
 const productsRoutes = Router();
 
@@ -16,7 +18,11 @@ productsRoutes.get("/:id", (req, res) => {
 
 // Crea un nuevo producto
 productsRoutes.post("/", (req, res) => {
-    const product = req.body
+    const product:Product = req.body
+    if (!product) {
+        res.status(400).json(product)
+        res.statusMessage="Error, faltan valores para el producto."
+    }
     createProduct(product)
     res.status(201).json(product)
 })

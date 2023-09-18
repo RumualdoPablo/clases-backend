@@ -1,3 +1,4 @@
+import Product from "../types/productType"
 import allProducts from "./mock-data"
 
 export const getAllProducts = () => {
@@ -8,12 +9,12 @@ export const getProductById = (id: string) => {
     return allProducts.find((product) => product.id === id)
 }
 
-export const createProduct = (product: any) => {
+export const createProduct = (product: Product) => {
     allProducts.push(product)
     return product
 }
 
-export const updateProduct = (id: string, product: any) => {
+export const updateProduct = (id: string, product: Product) => {
     const index = allProducts.findIndex((product) => product.id === id)
     allProducts[index] = product
     return product
